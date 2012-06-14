@@ -2,6 +2,7 @@ package cz.muni.fi.pv243.backend.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -15,6 +16,20 @@ public class Admin {
 	private String login;
 	private String email;
 	private String tel;
+	
+	public Admin(Long id, String password, String firstName, String lastName, String login, String email, String tel) {
+		
+		this.id = id;
+		this.password = password;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.login = login;
+		this.email = email;
+		this.tel = tel;
+	}
+	public Admin() {
+		
+	}
 	public Long getId() {
 		return id;
 	}

@@ -10,7 +10,7 @@ public interface AdminManager {
 	void editAdmin(Admin admin);
 	void removeAdmin(Admin admin);
 	List<Admin> getAdmin();
-	Admin getAdminByLastName(String name);
+	List<Admin> getAdminByLastName(String name);
 	Admin getAdmin(Long id);
 
 }

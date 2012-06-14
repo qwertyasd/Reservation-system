@@ -10,6 +10,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import cz.muni.fi.pv243.backend.entities.Admin;
+import cz.muni.fi.pv243.backend.entities.User;
 
 import cz.muni.fi.pv243.backend.entitiesManagersImpl.AdminManagerImpl;
 
@@ -47,6 +48,7 @@ public class AdminManagerTest {
 		man = new AdminManagerImpl();
 		admin = new Admin();
 		admin2 = new Admin();
+		admin3 = new Admin();
 	}
 
 	@Test

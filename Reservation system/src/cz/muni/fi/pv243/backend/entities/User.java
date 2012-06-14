@@ -7,8 +7,8 @@ import javax.persistence.Id;
 @Entity
 public class User {
 	
-	@Id
-    @GeneratedValue
+	//@Id
+    //@GeneratedValue
 	private Long id;
 	private String password;
 	private String firstName;
@@ -17,6 +17,23 @@ public class User {
 	private String email;
 	private String tel;
 	private boolean ok;
+	
+	public User(Long id, String password, String firstName, String lastName,
+			String login, String email, String tel, boolean ok) {
+		
+		this.id = id;
+		this.password = password;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.login = login;
+		this.email = email;
+		this.tel = tel;
+		this.ok = ok;
+	}
+	
+	public User() {		
+	}
+	
 	public Long getId() {
 		return id;
 	}
@@ -59,7 +76,7 @@ public class User {
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
-	public boolean isOk() {
+	public boolean getOk() {
 		return ok;
 	}
 	public void setOk(boolean ok) {

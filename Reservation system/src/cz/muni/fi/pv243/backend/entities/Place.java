@@ -6,12 +6,24 @@ import javax.persistence.Id;
 
 @Entity
 public class Place {
-	@Id
-    @GeneratedValue
+	//@Id
+    //@GeneratedValue
 	private Long id;
 	private String name;
 	private int openHour;
 	private int closeHour;
+	
+	
+	public Place() {		
+	}
+	public Place(Long id, String name, int openHour, int closeHour) {
+		
+		this.id = id;
+		this.name = name;
+		this.openHour = openHour;
+		this.closeHour = closeHour;
+	}
+	
 	public Long getId() {
 		return id;
 	}

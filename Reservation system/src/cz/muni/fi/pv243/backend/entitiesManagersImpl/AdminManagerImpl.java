@@ -20,6 +20,7 @@ public class AdminManagerImpl implements AdminManager {
 
 	@Override
 	public void saveAdmin(Admin admin) {
+		
 		if ((adminCache.get(admin.getId())) == null) {
 			adminCache.put(admin.getId(), admin);
 		}
@@ -49,6 +50,7 @@ public class AdminManagerImpl implements AdminManager {
 		Collection<Admin> adminCollection = adminCache.values();
 		result.addAll(adminCollection);
 		return result;
+		
 	}
 
 	@Override
@@ -64,12 +66,14 @@ public class AdminManagerImpl implements AdminManager {
 			}
 		}
 		return result;
+		
 	}
 
 	@Override
 	public Admin getAdmin(Long id) {
 
 		return adminCache.get(id);
+		
 	}
 
 }

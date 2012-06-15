@@ -18,7 +18,9 @@ public class UserManagerImpl implements UserManager{
 	
 	@Override
 	public void saveUser(User user) {
-		
+		if(user == null){
+			throw new NullPointerException("User can not be null.");
+		}
 		if ((userCache.get(user.getId())) == null) {
 			userCache.put(user.getId(), user);
 		}
@@ -27,7 +29,9 @@ public class UserManagerImpl implements UserManager{
 
 	@Override
 	public void editUser(User user) {
-
+		if(user == null){
+			throw new NullPointerException("User can not be null.");
+		}
 		if (userCache.containsKey(user.getId())) {
 			userCache.remove(user.getId());
 			userCache.put(user.getId(), user);
@@ -37,14 +41,18 @@ public class UserManagerImpl implements UserManager{
 
 	@Override
 	public void removeUser(User user) {
-
+		if(user == null){
+			throw new NullPointerException("User can not be null.");
+		}
 		userCache.remove(user.getId());
 		
 	}
 
 	@Override
 	public User getUser(Long id) {
-		
+		if(id == null){
+			throw new NullPointerException("Id can not be null.");
+		}
 		return userCache.get(id);
 		
 	}
@@ -62,7 +70,9 @@ public class UserManagerImpl implements UserManager{
 
 	@Override
 	public List<User> getUsersByLastName(String lastName) {
-		
+		if(lastName == null){
+			throw new NullPointerException("Last name can not be null.");
+		}
 		List<User> result = new ArrayList<User>();
 		
 		List<User> allUsers = this.getUsers();

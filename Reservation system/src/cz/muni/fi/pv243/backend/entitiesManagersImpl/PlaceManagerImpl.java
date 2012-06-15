@@ -18,7 +18,9 @@ public class PlaceManagerImpl implements PlaceManager {
 	
 	@Override
 	public void savePlace(Place place) {
-
+		if(place == null){
+			throw new NullPointerException("Place can not be null.");
+		}
 		if ((placeCache.get(place.getId())) == null) {
 			placeCache.put(place.getId(), place);
 		}				
@@ -26,7 +28,9 @@ public class PlaceManagerImpl implements PlaceManager {
 
 	@Override
 	public void editPlace(Place place) {
-
+		if(place == null){
+			throw new NullPointerException("Place can not be null.");
+		}
 		if (placeCache.containsKey(place.getId())) {
 			placeCache.remove(place.getId());
 			placeCache.put(place.getId(), place);
@@ -36,7 +40,9 @@ public class PlaceManagerImpl implements PlaceManager {
 
 	@Override
 	public void removePlace(Place place) {
-
+		if(place == null){
+			throw new NullPointerException("Place can not be null.");
+		}
 		placeCache.remove(place.getId());
 		
 	}
@@ -54,7 +60,9 @@ public class PlaceManagerImpl implements PlaceManager {
 
 	@Override
 	public Place getPlaceByName(String name) {
-
+		if(name == null){
+			throw new NullPointerException("Name can not be null.");
+		}
 		Place place = new Place();
 		List<Place> allPlaces = this.getPlaces();
 		
@@ -70,7 +78,9 @@ public class PlaceManagerImpl implements PlaceManager {
 
 	@Override
 	public Place getPlace(Long id) {
-		
+		if(id == null){
+			throw new NullPointerException("Id can not be null.");
+		}
 		return placeCache.get(id);
 	}
 

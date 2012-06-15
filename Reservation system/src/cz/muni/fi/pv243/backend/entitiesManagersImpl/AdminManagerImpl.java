@@ -20,7 +20,9 @@ public class AdminManagerImpl implements AdminManager {
 
 	@Override
 	public void saveAdmin(Admin admin) {
-		
+		if(admin == null){
+			throw new NullPointerException("Admin can not be null.");
+		}
 		if ((adminCache.get(admin.getId())) == null) {
 			adminCache.put(admin.getId(), admin);
 		}
@@ -28,7 +30,9 @@ public class AdminManagerImpl implements AdminManager {
 
 	@Override
 	public void editAdmin(Admin admin) {
-
+		if(admin == null){
+			throw new NullPointerException("Admin can not be null.");
+		}
 		if (adminCache.containsKey(admin.getId())) {
 			adminCache.remove(admin.getId());
 			adminCache.put(admin.getId(), admin);
@@ -37,7 +41,9 @@ public class AdminManagerImpl implements AdminManager {
 
 	@Override
 	public void removeAdmin(Admin admin) {
-
+		if(admin == null){
+			throw new NullPointerException("Admin can not be null.");
+		}
 		adminCache.remove(admin.getId());
 
 	}
@@ -55,7 +61,9 @@ public class AdminManagerImpl implements AdminManager {
 
 	@Override
 	public List<Admin> getAdminByLastName(String name) {
-
+		if(name == null){
+			throw new NullPointerException("Name can not be null.");
+		}
 		List<Admin> result = new ArrayList<Admin>();
 		
 		List<Admin> allAdmins = this.getAdmin();
@@ -71,7 +79,9 @@ public class AdminManagerImpl implements AdminManager {
 
 	@Override
 	public Admin getAdmin(Long id) {
-
+		if(id == null){
+			throw new NullPointerException("Id can not be null.");
+		}
 		return adminCache.get(id);
 		
 	}

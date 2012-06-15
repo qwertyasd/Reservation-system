@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import javax.inject.Inject;
-
 import org.infinispan.api.BasicCache;
 import org.infinispan.manager.DefaultCacheManager;
 

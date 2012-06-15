@@ -15,5 +15,6 @@ public interface ReservationManager {
 	void removeReservation(Reservation reservation);
 	List<Reservation> getReservationsForPlace(Place place);
 	List<Reservation> getFromToForPlace(Calendar from, Calendar to,Place place);
+	List<Reservation> getAllReservations();
 
 }

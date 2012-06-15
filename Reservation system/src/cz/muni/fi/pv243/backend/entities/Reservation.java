@@ -15,6 +15,20 @@ public class Reservation {
 	private Long placeId;
 	private Calendar startDate;
 	private Calendar endDate;
+	
+	
+	public Reservation() {
+	}
+	
+	public Reservation(Long id, Long userId, Long placeId, Calendar startDate,
+			Calendar endDate) {
+		
+		this.id = id;
+		this.userId = userId;
+		this.placeId = placeId;
+		this.startDate = startDate;
+		this.endDate = endDate;
+	}
 	public Long getId() {
 		return id;
 	}

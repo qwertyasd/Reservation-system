@@ -2,6 +2,7 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
    xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:f="http://java.sun.com/jsf/core"
    xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
 	<ui:insert name="header"/>
@@ -24,9 +25,19 @@
 			
 			
 			
-			<p><a href="index.jsf?sportoviste=1">Kurt 1</a><br/>
-			<a href="index.jsf?sportoviste=2">Kurt 2</a><br/>
-			<a href="index.jsf?sportoviste=3">bazén</a></p>
+			
+			<h:outputText value="Žádná sportoviště"
+			rendered="#{empty places}"/>
+			
+			<h:dataTable value="#{places}" var="_place"
+				rendered="#{not empty places}">
+				<h:column>
+					<f:facet name="header">Seznam sportovišť</f:facet>
+					<h:outputLink value="?sportoviste=#{_place.id}">
+					  #{_place.name}
+					</h:outputLink>
+				</h:column>
+			</h:dataTable>
          </div>
          
          <ui:insert name="content">

@@ -5,11 +5,9 @@ import java.util.List;
 
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Produces;
-import javax.inject.Inject;
 import javax.inject.Named;
 
 import cz.muni.fi.pv243.backend.entities.Place;
-import cz.muni.fi.pv243.backend.entitiesManagers.PlaceManager;
 
 @Stateless
 public class Places {
@@ -26,13 +24,12 @@ public class Places {
 		ret.add(new Place(2L,"Bccd",7,19));
 		return ret;
 	}
-	
+
 	@Named
 	public void savePlace(Place place){
 		System.out.println("Saving place " + place);
 	}
 	
-	@Produces
 	@Named
 	public Place getPlace(long id){
 		System.out.println("Getting place " + id);

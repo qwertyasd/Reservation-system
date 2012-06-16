@@ -6,28 +6,36 @@
 	template="/WEB-INF/templates/default.xhtml">
 	<ui:define name="content">
 		<h1>Reservation System</h1>
-		<h2>Úprava sportovišť</h2>
+		<h2>Seznam uživatelů</h2>
 		
-		<h:outputText value="Žádná sportoviště"
-			rendered="#{empty places}"/>
+		<h:outputText value="Žádní uživatelé"
+			rendered="#{empty users}"/>
 			
-		<h:dataTable value="#{places}" var="_place"
-			rendered="#{not empty places}">
+		<h:dataTable value="#{users}" var="_user"
+			rendered="#{not empty users}">
 			<h:column>
 				<f:facet name="header">id</f:facet>
 				#{_place.id}
 			</h:column>
 			<h:column>
 				<f:facet name="header">Jméno</f:facet>
-				#{_place.name}
+				#{_place.firstName}
 			</h:column>
 			<h:column>
-				<f:facet name="header">Od</f:facet>
-				#{_place.openHour}
+				<f:facet name="header">Přijmení</f:facet>
+				#{_place.lastName}
 			</h:column>
 			<h:column>
-				<f:facet name="header">Do</f:facet>
-				#{_place.closeHour}
+				<f:facet name="header">Login</f:facet>
+				#{_place.login}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Email</f:facet>
+				#{_place.email}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Tel</f:facet>
+				#{_place.tel}
 			</h:column>
 		</h:dataTable>
 	</ui:define>

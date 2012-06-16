@@ -15,10 +15,20 @@
          <div id="sidebar">
             <h3>Sidebar</h3>
             <p>This is sidebar</p>
-            <ui:insert name="sidebar">
-         		[Template content will be inserted here]
-         	</ui:insert>
+            
+			<p><a href="login.jsf">Přihlásit</a><br/>
+			<a href="index.jsf?logout=1">Odhlásit</a><br/>
+			<a href="register.jsf">Registrovat</a><br/>
+			<a href="places.jsf">Sportoviště</a><br/>
+			<a href="users.jsf">Uživatelé</a></p>
+			
+			
+			
+			<p><a href="index.jsf?sportoviste=1">Kurt 1</a><br/>
+			<a href="index.jsf?sportoviste=2">Kurt 2</a><br/>
+			<a href="index.jsf?sportoviste=3">bazén</a></p>
          </div>
+         
          <ui:insert name="content">
          	[Template content will be inserted here]
          </ui:insert>

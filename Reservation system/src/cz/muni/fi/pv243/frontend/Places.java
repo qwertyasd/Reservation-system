@@ -29,14 +29,14 @@ public class Places {
 	
 	@Named
 	public void savePlace(Place place){
-		System.out.println("Saving places");
+		System.out.println("Saving place " + place);
 	}
 	
 	@Produces
 	@Named
-	public Place getPlace(){
-		System.out.println("Getting place");
-		return new Place();
+	public Place getPlace(long id){
+		System.out.println("Getting place " + id);
+		return new Place(id,"Tra Lala",(int)(id+2) % 12,(int)(id*2) % 12 + 8);
 	}
 	
 	

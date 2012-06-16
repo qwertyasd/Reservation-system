@@ -15,27 +15,27 @@
 			rendered="#{not empty users}">
 			<h:column>
 				<f:facet name="header">id</f:facet>
-				#{_place.id}
+				#{_user.id}
 			</h:column>
 			<h:column>
 				<f:facet name="header">Jméno</f:facet>
-				#{_place.firstName}
+				#{_user.firstName}
 			</h:column>
 			<h:column>
 				<f:facet name="header">Přijmení</f:facet>
-				#{_place.lastName}
+				#{_user.lastName}
 			</h:column>
 			<h:column>
 				<f:facet name="header">Login</f:facet>
-				#{_place.login}
+				#{_user.login}
 			</h:column>
 			<h:column>
 				<f:facet name="header">Email</f:facet>
-				#{_place.email}
+				#{_user.email}
 			</h:column>
 			<h:column>
 				<f:facet name="header">Tel</f:facet>
-				#{_place.tel}
+				#{_user.tel}
 			</h:column>
 		</h:dataTable>
 	</ui:define>

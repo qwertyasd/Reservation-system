@@ -3,6 +3,7 @@ package cz.muni.fi.pv243.backend.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class User {
@@ -10,12 +11,19 @@ public class User {
 	@Id
     @GeneratedValue
 	private Long id;
+	@NotNull
 	private String password;
+	@NotNull
 	private String firstName;
+	@NotNull
 	private String lastName;
+	@NotNull
 	private String login;
+	@NotNull
 	private String email;
+	@NotNull
 	private String tel;
+	@NotNull
 	private boolean ok;
 	
 	public User(Long id, String password, String firstName, String lastName,

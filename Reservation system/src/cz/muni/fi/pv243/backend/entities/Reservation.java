@@ -5,15 +5,20 @@ import java.util.Calendar;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Reservation {
 	@Id
     @GeneratedValue
 	private Long id;
+	@NotNull
 	private Long userId;
+	@NotNull
 	private Long placeId;
+	@NotNull
 	private Calendar startDate;
+	@NotNull
 	private Calendar endDate;
 	
 	

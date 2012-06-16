@@ -6,19 +6,30 @@
 	template="/WEB-INF/templates/default.xhtml">
 	<ui:define name="content">
 		<h1>Reservation System</h1>
-		
-		<h:messages />
-		
-		<p>This is our content! :)</p>
+		<h2>Úprava sportovišť</h2>
 		
 		<h:outputText value="Žádná sportoviště"
 			rendered="#{empty places}"/>
 			
-		<h:outputText value="Moooc sportovišť"
-			rendered="#{not empty places}"/>
-			
-			
-			
+		<h:dataTable value="#{places}" var="_place"
+			rendered="#{not empty places}">
+			<h:column>
+				<f:facet name="header">id</f:facet>
+				#{_place.id}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Jméno</f:facet>
+				#{_place.name}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Od</f:facet>
+				#{_place.openHour}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Do</f:facet>
+				#{_place.closeHour}
+			</h:column>
+		</h:dataTable>
 	</ui:define>
 	
 	

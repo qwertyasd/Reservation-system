@@ -9,25 +9,18 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Kuba/.m2/repository/org/infinispan/infinispan-core/5.1.3.FINAL/infinispan-core-5.1.3.FINAL.jar">
-		<attributes>
-			<attribute name="maven.groupId" value="org.infinispan"/>
-			<attribute name="maven.artifactId" value="infinispan-core"/>
-			<attribute name="maven.version" value="5.1.3.FINAL"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/kuba/pv243/infinispan-5.1.5.FINAL-all/infinispan-5.1.5.FINAL/lib/jboss-logging-3.1.0.GA.jar"/>
-	<classpathentry kind="lib" path="C:/kuba/pv243/infinispan-5.1.5.FINAL-all/infinispan-5.1.5.FINAL/lib/jboss-marshalling-1.3.11.GA.jar"/>
-	<classpathentry kind="lib" path="C:/kuba/pv243/infinispan-5.1.5.FINAL-all/infinispan-5.1.5.FINAL/lib/jboss-marshalling-river-1.3.11.GA.jar"/>
-	<classpathentry kind="lib" path="C:/kuba/pv243/infinispan-5.1.5.FINAL-all/infinispan-5.1.5.FINAL/lib/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
-	<classpathentry kind="lib" path="C:/kuba/pv243/infinispan-5.1.5.FINAL-all/infinispan-5.1.5.FINAL/lib/jcip-annotations-1.0.jar"/>
-	<classpathentry kind="lib" path="C:/kuba/pv243/infinispan-5.1.5.FINAL-all/infinispan-5.1.5.FINAL/lib/jgroups-3.0.10.Final.jar"/>
-	<classpathentry kind="lib" path="C:/kuba/pv243/infinispan-5.1.5.FINAL-all/infinispan-5.1.5.FINAL/lib/log4j-1.2.16.jar"/>
-	<classpathentry kind="lib" path="C:/kuba/pv243/infinispan-5.1.5.FINAL-all/infinispan-5.1.5.FINAL/lib/org.osgi.core-4.3.0.jar"/>
-	<classpathentry kind="lib" path="C:/kuba/pv243/infinispan-5.1.5.FINAL-all/infinispan-5.1.5.FINAL/lib/rhq-pluginAnnotations-3.0.4.jar"/>
-	<classpathentry kind="lib" path="C:/kuba/pv243/infinispan-5.1.5.FINAL-all/infinispan-5.1.5.FINAL/lib/stax2-api-3.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/kuba/pv243/infinispan-5.1.5.FINAL-all/infinispan-5.1.5.FINAL/lib/woodstox-core-asl-4.1.1.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="lib/infinispan-core.jar"/>
+	<classpathentry kind="lib" path="lib/jboss-logging-3.1.0.GA.jar"/>
+	<classpathentry kind="lib" path="lib/jboss-marshalling-1.3.11.GA.jar"/>
+	<classpathentry kind="lib" path="lib/jboss-marshalling-river-1.3.11.GA.jar"/>
+	<classpathentry kind="lib" path="lib/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="lib/jcip-annotations-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/jgroups-3.0.10.Final.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="lib/org.osgi.core-4.3.0.jar"/>
+	<classpathentry kind="lib" path="lib/rhq-pluginAnnotations-3.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/stax2-api-3.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/woodstox-core-asl-4.1.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

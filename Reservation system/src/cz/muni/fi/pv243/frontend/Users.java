@@ -9,7 +9,6 @@ import javax.inject.Named;
 
 import cz.muni.fi.pv243.backend.entities.Admin;
 import cz.muni.fi.pv243.backend.entities.Person;
-import cz.muni.fi.pv243.backend.entities.Place;
 import cz.muni.fi.pv243.backend.entities.User;
 
 @Stateless
@@ -30,18 +29,17 @@ public class Users {
 	public void addUser(User user){
 		System.out.println("Adding user " + user);
 	}
-	
+
 	@Named
 	public void removeUser(long id){
 		System.out.println("Removing user " + id);
 	}
-	
+
 	@Named
 	public void acceptUser(long id){
 		System.out.println("Accepting user " + id);
 	}
 	
-	@Produces
 	@Named
 	public Person getUser(long id){
 		System.out.println("Getting user " + id);

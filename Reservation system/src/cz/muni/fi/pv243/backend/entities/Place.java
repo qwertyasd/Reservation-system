@@ -54,5 +54,9 @@ public class Place {
 	}
 	
 	
+	public String toString() {
+		return id + ":" + name + "(" + openHour + " - " + closeHour + ")";
+	}
+	
 
 }
